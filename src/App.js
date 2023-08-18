@@ -1,22 +1,20 @@
 import React from 'react';
-import VideoPlayer from './components/VideoPlayer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import SecondPage from './SecondPage';
 
-function App() {
+const App = () => {
+
   return (
-    <div style={styles.app}>
-      <VideoPlayer
-        videoUrl="https://www.example.com/sample.mp4" // 替换为你的视频链接
-        title="React Video Player"
-      />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/second" element={<SecondPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
-
-const styles = {
-  app: {
-    fontFamily: 'Arial, sans-serif',
-    textAlign: 'center',
-  },
 };
 
 export default App;
