@@ -21,8 +21,6 @@ const SecondPage = () => {
 
   return (
     <div>
-      <h2>Second Page</h2>
-      
       {/* 文件上传区域 */}
       <div>
         <input type="file" onChange={handleFileChange} />
